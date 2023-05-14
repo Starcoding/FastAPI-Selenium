@@ -1,0 +1,26 @@
+version: "3.9"
+
+volumes:
+  postgres_data:
+
+services:
+  database:
+    image: postgres:13.4
+    environment:
+      PGDATA: /data/postgres
+    volumes:
+      - postgres_data:/data/postgres
+      - ./dumps:/tmp/dumps
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+  application:
+    build: .
+    platform: linux/amd64
+    volumes:
+      - postgres_data:/data/postgres
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env

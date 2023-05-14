@@ -1,0 +1,14 @@
+SQLAlchemy==2.0.13
+selenium==4.9.1
+alembic==1.10.0
+fastapi-pagination==0.12.1
+inflection==0.5.1
+psycopg2-binary==2.9.5
+asyncpg==0.27.0
+greenlet==2.0.2
+python-dotenv==1.0.0
+uvicorn==0.22.0
+pyvirtualdisplay==3.0
+xvfbwrapper==0.2.9
+webdriver-manager==3.8.6
+fastapi==0.92.0
